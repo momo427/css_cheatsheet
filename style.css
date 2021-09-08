@@ -1,0 +1,65 @@
+/*Style cheatsheet*/
+/*Importing downloaded fonts*/
+@font-face {
+    src: url(./fonts/stranger_back_in_the_night/Stranger\ back\ in\ the\ Night.ttf);
+    font-family: zombie;
+}
+/* h1 is the selector | the {} are the declaration | color is the property and 
+| color: rgba(0, 0, 255, 0.486) is the value;
+ */
+ 
+h1{
+color: rgb(250, 250, 250, 0.658);
+letter-spacing: .17em;
+text-align: center;
+}
+
+body{
+background-color: rgb(1, 2, 1);
+/* note that the color of the text does not change even though this 
+selector includes the h1 element however the font-family changes this 
+is because the color is already declared with a more specifc selector */
+color: rgba(250, 250, 250, 0.658);
+font-family: zombie;
+font-size: 4em;
+line-height: 1em;
+margin: 0;
+height: 100vh;
+}
+
+p{
+    width: 95rem;
+    text-indent: 11%;
+    margin: auto;
+}
+
+img{
+    width: 45rem;
+    height: 40rem;
+    border-radius: 50%;
+    margin-left: 30rem;
+    padding: 8rem;
+    animation: breathe 3500ms
+    infinite forwards;
+}
+.para {
+    display: flex;
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1500px) {
+    .para {  width: auto; float: left;}
+    p { display: inline-block; width: 50rem; margin-left: 4.7rem;}
+    img {margin-left: 3.5rem;}
+  }
+
+ @keyframes breathe {
+50% {
+transform: scaleX(1.2) scaleY(1.2);
+}
+100% {
+    transform: scaleX(1) scaleY(1) ;
+}
+  }
